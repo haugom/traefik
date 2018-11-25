@@ -20,6 +20,9 @@ domain = "web.cloud.haugom.org"
 watch = true
 exposedbydefault = false
 
+[rest]
+  entryPoint = "traefik"
+
 [acme]
 email = "www@haugom.org"
 storage = "acme.json"
@@ -27,3 +30,8 @@ entryPoint = "https"
 OnHostRule = true
 [acme.httpChallenge]
 entryPoint = "http"
+
+[api]
+  entrypoint = "traefik"
+  dashboard = true
+  debug = true
